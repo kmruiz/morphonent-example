@@ -1,0 +1,18 @@
+{
+  "name": "morphonent-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+      "build": "webpack --config webpack.config.js",
+      "start": "webpack-dev-server --config webpack.config.js"
+    },
+  "devDependencies": {
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "morphonent": "^0.7.1"
+  }
+}
