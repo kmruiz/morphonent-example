@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-	entry: path.join(__dirname, 'app', 'index.js'),
+	entry: path.join(__dirname, 'app', 'index.jsx'),
   output: {
     filename: path.join('main.js')
   },
@@ -9,5 +9,16 @@ module.exports = {
     contentBase: path.join('dist'),
     compress: true,
     port: 9000,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.m?jsx?$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+        }
+      }
+    ]
   }
 };

@@ -4,15 +4,18 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-      "build": "webpack --config webpack.config.js",
-      "start": "webpack-dev-server --config webpack.config.js"
-    },
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --config webpack.config.js"
+  },
   "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "babel-loader": "^8.0.6",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
-    "morphonent": "^0.7.1"
+    "morphonent": "^0.11.0"
   }
 }
