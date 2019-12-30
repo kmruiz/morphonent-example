@@ -1,0 +1,27 @@
+{
+  "name": "morphonent-todo-list-example",
+  "version": "1.0.0",
+  "description": "morphonent example application",
+  "main": "app/index.js",
+  "author": "Kevin Mas Ruiz <masruizkevin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --config webpack.config.js",
+    "test": "jest --watchAll",
+    "test:once": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "morphonent-test": "^0.4.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "morphonent": "^0.13.1"
+  }
+}
