@@ -1,5 +1,5 @@
-import { testing, click, keyup } from 'morphonent-test'
-import { todoList } from './todoList'
+import { testing, click } from 'morphonent-test'
+import { todoList } from './component/todoList'
 
 const randomItem = done => ({ id: +new Date(), title: '' + Math.random(), done })
 
@@ -41,6 +41,19 @@ describe('todoList', () => {
                                 .textContent()
 
             expect(foundTitle).toBe(text)
+        })
+    })
+
+    describe('marking items as done', () => {
+        it('should render the new item information', async () => {
+            const item = randomItem(false)
+            const foundClass = await testing(todoList([item]))
+                                .findById('item-' + item.id)
+                                .trigger(click())
+                                .findById('item-' + item.id)
+                                .attribute('class')
+
+            expect(foundClass).toBe('done')
         })
     })
 })
