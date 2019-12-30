@@ -56,4 +56,17 @@ describe('todoList', () => {
             expect(foundClass).toBe('done')
         })
     })
+
+    describe('marking items as pending', () => {
+        it('should render the new item information', async () => {
+            const item = randomItem(true)
+            const foundClass = await testing(todoList([item]))
+                                .findById('item-' + item.id)
+                                .trigger(click())
+                                .findById('item-' + item.id)
+                                .attribute('class')
+
+            expect(foundClass).toBe('pending')
+        })
+    })
 })
