@@ -6,10 +6,18 @@ function isAnAmazingDoer(todos) {
     return todos.length > 3 && todos.every(item => item.done)
 }
 
+function enhancedTodoList(todoItems, inputValue) {
+    if (isAnAmazingDoer(todoItems)) {
+        return allDoneTodoList(todoItems, inputValue)
+    }
+
+    return todoList(todoItems, inputValue)
+}
+
 export function addItemToTodoList(todos, title) {
     id = ++id
     const todoItem = { id, title, done: false }
-    return todoList(todos.concat(todoItem))
+    return enhancedTodoList(todos.concat(todoItem))
 }
 
 export function toggleItemState(todos, itemId) {
@@ -19,11 +27,18 @@ export function toggleItemState(todos, itemId) {
     const newItem = { ... newTodos[itemIndex], done: !newTodos[itemIndex].done }
     newTodos.splice(itemIndex, 1, newItem)
 
-    if (isAnAmazingDoer(newTodos)) {
-        return allDoneTodoList(newTodos)
-    } 
-    
-    return todoList(newTodos)
+    return enhancedTodoList(newTodos)
+}
+
+export function toggleAll(todoItems, inputValue) {
+    const areAllDone = todoItems.every(item => item.done === true)
+    if (areAllDone) {
+        todoItems = todoItems.map(item => ({ ...item, done: false }))
+    } else {
+        todoItems = todoItems.map(item => ({ ...item, done: true }))
+    }
+
+    return enhancedTodoList(todoItems, inputValue)
 }
 
 export function login() {

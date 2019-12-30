@@ -69,4 +69,28 @@ describe('todoList', () => {
             expect(foundClass).toBe('pending')
         })
     })
+
+    describe('toggleAll', () => {
+        it('should mark all items to false if all of them are true', async () => {
+            const item = randomItem(true)
+            const foundClass = await testing(todoList([item]))
+                                .findById('toggle-all-button')
+                                .trigger(click())
+                                .findById('item-' + item.id)
+                                .attribute('class')
+
+            expect(foundClass).toBe('pending')
+        })
+
+        it('should mark all items to true if any of them is false', async () => {
+            const item = randomItem(false)
+            const foundClass = await testing(todoList([item]))
+                                .findById('toggle-all-button')
+                                .trigger(click())
+                                .findById('item-' + item.id)
+                                .attribute('class')
+
+            expect(foundClass).toBe('done')
+        })
+    })
 })
