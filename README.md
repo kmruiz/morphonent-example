@@ -18,6 +18,15 @@ $> npm install
 $> npm run start
 ```
 
+## Running the tests
+
+You can run the tests in watch mode using the test command:
+
+```
+$> yarn test
+$> npm test
+```
+
 ## Structure
 
 Logic is splitten by persona, now there is a single persona, the doer of the todo list. All logic for that persona is in the [app/doer folder](https://github.com/kmruiz/morphonent-example/tree/master/app/doer).
