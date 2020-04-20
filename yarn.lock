@@ -2506,10 +2506,10 @@ mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
-morphonent@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/morphonent/-/morphonent-0.11.0.tgz#1045348e0ad05424ca77ca08095ddf5fd7952dd6"
-  integrity sha512-E0QLF+1+7ZY6cbWPwbrM/OYRRAG80SHy+TCJnRfWfMTYKTDv14g0wpFczOjwZQKWWdSS00hUoH7LJkpqE6Lagg==
+morphonent@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/morphonent/-/morphonent-0.14.0.tgz#313a806e920950957cd184cbe1be0255b792a20e"
+  integrity sha512-UYnfWdXiVPCzm98Sai0MW42MjDM00H7KW/8XRjYFWQXQCn1zIXM4raddZJONST08wsiHijtbKgy8k0/fsu3YNA==
 
 move-concurrently@^1.0.1:
   version "1.0.1"

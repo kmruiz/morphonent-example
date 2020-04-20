@@ -16,6 +16,6 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
-    "morphonent": "^0.11.0"
+    "morphonent": "^0.14.0"
   }
 }

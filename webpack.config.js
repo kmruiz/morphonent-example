@@ -9,6 +9,9 @@ module.exports = {
     contentBase: path.join('dist'),
     compress: true,
     port: 9000,
+    historyApiFallback: {
+      index: '/'
+    }
   },
   module: {
     rules: [
